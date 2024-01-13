@@ -16,7 +16,7 @@ export default async function Gallery() {
   
   return (
     <section className="px-2 my-3 grid gap-2 grid-cols-gallery">
-      {images.photos.map((photo) => (
+      {photoWithBlur.map((photo) => (
         <ImgContainer key={photo.id} photo={photo} />
       ))}
     </section>

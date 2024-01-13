@@ -11,16 +11,9 @@ async function getBase64(imageUrl: string) {
 
         const buffer = await res.arrayBuffer()
 
-        const newBuffer = Buffer.from(buffer)
+        const { base64 } =  await getPlaiceholder(Buffer.from(buffer))
 
-        console.log(newBuffer)
-
-
-        // console.log(sharp)
-
-        const { base64 } =  await getPlaiceholder(newBuffer)
-
-        return 'base64';
+        return base64;
     } catch (e) {
         // Will show in terminal console
         if (e instanceof Error) console.log(e.stack)
