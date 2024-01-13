@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: "Image Gallery",
   description: "Image gallery created by Joe",
